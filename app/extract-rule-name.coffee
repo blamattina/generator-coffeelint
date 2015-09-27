@@ -6,4 +6,3 @@ module.exports = (appname) ->
     match[1]
   else
     appname
-

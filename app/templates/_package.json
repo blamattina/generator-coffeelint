@@ -1,5 +1,8 @@
 {
-  "name": "package",
+  "name": "<%= appname %>",
   "version": "0.0.0",
+  "keywords": [
+    "coffeelintrule"
+  ],
   "dependencies": {}
 }
