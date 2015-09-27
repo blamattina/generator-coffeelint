@@ -2,14 +2,20 @@
   "name": "<%= appname %>",
   "version": "0.0.0",
   "scripts": {
-    "lint": "coffeelint src/ spec/"
+    "lint": "coffeelint src/ spec/",
+    "jasmine": "node jasmine-runner.js",
+    "test": "npm run lint && npm run jasmine"
   },
   "keywords": [
     "coffeelintrule"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "coffee-script": "^1.10.0"
+  },
   "devDependencies": {
     "coffeelint": "^1.12.1",
-    "coffeelint-no-focused-jasmine-specs": "^0.1.0"
+    "coffeelint-no-focused-jasmine-specs": "^0.1.0",
+    "jasmine": "^2.3.2",
+    "jasmine-spec-reporter": "^2.4.0"
   }
 }

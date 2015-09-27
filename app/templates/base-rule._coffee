@@ -5,4 +5,7 @@ class <%= ruleClass %>
     message: '<%= ruleMessage %>'
     description: '<%= ruleDescription %>'
 
+  lintLine: ->
+    false
+
 module.exports = <%= ruleClass %>

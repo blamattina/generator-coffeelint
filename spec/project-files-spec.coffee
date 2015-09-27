@@ -2,7 +2,7 @@ path = require 'path'
 assert = require 'yeoman-assert'
 helpers = require('yeoman-generator').test
 os = require 'os'
-describe 'coffeelint:app', ->
+describe 'project files', ->
   beforeEach (done) ->
     helpers.run(path.join(__dirname, '../app'))
       .withOptions(skipInstall: true)
@@ -11,9 +11,10 @@ describe 'coffeelint:app', ->
       .withPrompts(ruleDescription: 'Description of my rule.')
       .on 'end', done
 
-  it 'creates files', ->
+  it 'exist', ->
     assert.file [
       '.editorconfig'
       'coffeelint.json'
+      'jasmine-runner.js'
       'spec/support/jasmine.json'
     ]

@@ -14,9 +14,6 @@ describe 'generated package.json', ->
 
     @pkg = JSON.parse fs.readFileSync('package.json', 'utf8')
 
-  it 'exists', ->
-    assert.file ['package.json']
-
   it 'sets the package name', ->
     expect(@pkg.name).toBe 'coffeelint-no-bad-code'
 
@@ -30,3 +27,13 @@ describe 'generated package.json', ->
     devDependencies = Object.keys @pkg.devDependencies
     expect(devDependencies).toContain 'coffeelint'
     expect(devDependencies).toContain 'coffeelint-no-focused-jasmine-specs'
+
+  it 'is configured to run jasmine', ->
+    expect(@pkg.scripts.jasmine).toEqual 'node jasmine-runner.js'
+
+    devDependencies = Object.keys @pkg.devDependencies
+    expect(devDependencies).toContain 'jasmine'
+    expect(devDependencies).toContain 'jasmine-spec-reporter'
+
+  it 'has a test script' , ->
+    expect(@pkg.scripts.test).toEqual 'npm run lint && npm run jasmine'

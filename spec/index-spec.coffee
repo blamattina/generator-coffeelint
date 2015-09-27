@@ -11,9 +11,6 @@ describe 'generated index.js', ->
       .withPrompts(ruleDescription: 'Description of my rule.')
       .on 'end', done
 
-  it 'exists', ->
-    assert.file ['index.js']
-
   it 'requires coffeescript', ->
     assert.fileContent 'index.js', '''require('coffee-script/register');'''
 

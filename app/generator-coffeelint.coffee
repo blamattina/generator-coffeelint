@@ -70,10 +70,12 @@ module.exports = yeoman.generators.Base.extend
       @template '_package.json', 'package.json'
       @template 'index.js', 'index.js'
       @template 'base-rule._coffee', "src/#{@pkgName}.coffee"
+      @template 'base-rule-spec._coffee', "spec/#{@pkgName}-spec.coffee"
 
     projectfiles: ->
       @copy 'editorconfig', '.editorconfig'
       @copy 'coffeelint.json', 'coffeelint.json'
+      @copy 'jasmine-runner.js', 'jasmine-runner.js'
       @copy 'jasmine.json', 'spec/support/jasmine.json'
 
   install: ->
