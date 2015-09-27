@@ -1,8 +1,15 @@
 {
   "name": "<%= appname %>",
   "version": "0.0.0",
+  "scripts": {
+    "lint": "coffeelint src/ spec/"
+  },
   "keywords": [
     "coffeelintrule"
   ],
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "coffeelint": "^1.12.1",
+    "coffeelint-no-focused-jasmine-specs": "^0.1.0"
+  }
 }

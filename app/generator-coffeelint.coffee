@@ -46,15 +46,20 @@ module.exports = yeoman.generators.Base.extend
           return @prompting.askForRuleName.call this
 
         @ruleName = props.ruleName
+        @ruleClassName = _s.classify @ruleName
         @appname = _s.slugify "coffeelint-#{@ruleName}"
         done()
 
   writing:
     app: ->
       @template '_package.json', 'package.json'
+      @template 'index.js', 'index.js'
+      @template 'base-rule._coffee', "src/#{@ruleName}.coffee"
 
     projectfiles: ->
-      @fs.copy @templatePath('editorconfig'), @destinationPath('.editorconfig')
+      @copy 'editorconfig', '.editorconfig'
+      @copy 'coffeelint.json', 'coffeelint.json'
+      @copy 'jasmine.json', 'spec/support/jasmine.json'
 
   install: ->
     @installDependencies()
