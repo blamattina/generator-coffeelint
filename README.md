@@ -1,7 +1,10 @@
-# generator-coffeelint [![Build Status][build-shield]][build-status]
+# generator-coffeelint
+[![Build Status][build-shield]][build-status] [![npm][npm-shield]][npm-package]
+
 
 > [Yeoman](http://yeoman.io) generator
-
+[npm-shield]: https://img.shields.io/npm/v/generator-coffeelint.svg?style=flat-square
+[npm-package]: https://www.npmjs.com/package/coffeelint-no-focused-jasmine-specs
 [build-shield]: https://img.shields.io/circleci/project/blamattina/generator-coffeelint.svg?style=flat-square
 [build-status]: https://circleci.com/gh/blamattina/generator-coffeelint
 
