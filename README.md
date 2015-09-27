@@ -1,7 +1,9 @@
-# generator-coffeelint [![Build Status](https://secure.travis-ci.org/blamattina/generator-coffeelint.png?branch=master)](https://travis-ci.org/blamattina/generator-coffeelint)
+# generator-coffeelint [![Build Status][build-shield]][build-status]
 
 > [Yeoman](http://yeoman.io) generator
 
+[build-shield]: https://img.shields.io/circleci/project/blamattina/generator-coffeelint.svg?style=flat-square
+[build-status]: https://circleci.com/gh/blamattina/generator-coffeelint
 
 ## Getting Started
 
