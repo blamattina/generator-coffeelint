@@ -47,6 +47,8 @@ module.exports = yeoman.generators.Base.extend
 
         @ruleName = props.ruleName
         @ruleClassName = _s.classify @ruleName
+        @ruleUnderscored = _s.underscored @ruleName
+        @ruleHumanized = _s.humanize @ruleName
         @appname = _s.slugify "coffeelint-#{@ruleName}"
         done()
 
