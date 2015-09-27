@@ -13,7 +13,7 @@
   "scripts": {
     "lint": "coffeelint app/ spec/",
     "jasmine": "NODE_PATH=. node jasmine.js",
-    "test": "npm run lint && npm run test"
+    "test": "npm run lint && npm run jasmine"
   },
   "keywords": [
     "yeoman-generator"
