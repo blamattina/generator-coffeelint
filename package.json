@@ -11,7 +11,9 @@
     "url": "https://github.com/blamattina"
   },
   "scripts": {
-    "test": "node jasmine.js"
+    "lint": "coffeelint app/ spec/",
+    "jasmine": "NODE_PATH=. node jasmine.js",
+    "test": "npm run lint && npm run test"
   },
   "keywords": [
     "yeoman-generator"
@@ -23,6 +25,8 @@
     "yosay": "^1.0.2"
   },
   "devDependencies": {
+    "coffeelint": "^1.12.1",
+    "coffeelint-no-focused-jasmine-specs": "^0.1.0",
     "jasmine": "^2.3.2"
   }
 }

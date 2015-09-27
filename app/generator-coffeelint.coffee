@@ -8,7 +8,7 @@ module.exports = yeoman.generators.Base.extend
   prompting: ->
     done = @async()
     # Have Yeoman greet the user.
-    @log yosay('Welcome to the dandy ' + chalk.red('Coffeelint') + ' generator!')
+    @log yosay "Welcome to the dandy #{chalk.red('Coffeelint')} generator!"
     prompts = [ {
       type: 'confirm'
       name: 'someOption'
