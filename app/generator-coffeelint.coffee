@@ -9,9 +9,9 @@ extractRuleName = require './extract-rule-name'
 
 module.exports = yeoman.generators.Base.extend
   prompting:
-    # askFor: ->
-    #   # Have Yeoman greet the user.
-    #   @log yosay "Welcome to the dandy #{chalk.red('Coffeelint')} generator!"
+    askFor: ->
+      # Have Yeoman greet the user.
+      @log yosay "Welcome to the dandy #{chalk.red('Coffeelint')} generator!"
 
     askForRuleName: ->
       defaultRuleName = extractRuleName @appname
