@@ -1,9 +1,8 @@
-class <%= ruleClassName %>
+class <%= ruleClass %>
   rule:
     name: '<%= ruleUnderscored %>'
     level: 'error'
-    message: '<%= ruleHumanized %>'
-    description: '''
-    '''
+    message: '<%= ruleMessage %>'
+    description: '<%= ruleDescription %>'
 
-module.exports = <%= ruleClassName %>
+module.exports = <%= ruleClass %>

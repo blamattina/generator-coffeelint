@@ -14,49 +14,62 @@ module.exports = yeoman.generators.Base.extend
       @log yosay "Welcome to the dandy #{chalk.red('Coffeelint')} generator!"
 
     askForRuleName: ->
-      defaultRuleName = extractRuleName @appname
+      extractedName = extractRuleName _s.slugify(@appname)
 
       prompts = [
         {
           type: 'input'
-          name: 'ruleName'
+          name: 'pkgName'
           message: 'What is the name of your coffelint rule?'
-          default: defaultRuleName
+          default: extractedName
         },
         {
           type: 'confirm'
-          name: 'askForRuleNameAgain'
+          name: 'askForPkgNameAgain'
           message: 'The name above already exists on npm, choose another?'
           default: true
           when: (answers) ->
             done = @async()
-            name = "coffeelint-#{answers.ruleName}"
+            pkgName = "coffeelint-#{_s.slugify answers.pkgName}"
 
-            npmName name, (err, available) ->
+            npmName pkgName, (err, available) ->
               if not available
                 done true
               else
                 done false
+        },
+        {
+          type: 'input'
+          name: 'ruleDescription'
+          message: 'Describe your rule?'
+          default: _s.humanize extractedName
+        },
+        {
+          type: 'input'
+          name: 'ruleMessage'
+          message: 'What message do you want to display when your rule fails?'
+          default: _s.humanize extractedName
         }
       ]
 
       done = @async()
       @prompt prompts, (props) =>
-        if props.askForRuleNameAgain
+        if props.askForPkgNameAgain
           return @prompting.askForRuleName.call this
 
-        @ruleName = props.ruleName
-        @ruleClassName = _s.classify @ruleName
-        @ruleUnderscored = _s.underscored @ruleName
-        @ruleHumanized = _s.humanize @ruleName
-        @appname = _s.slugify "coffeelint-#{@ruleName}"
+        @pkgName = _s.slugify props.pkgName
+        @ruleClass = _s.classify props.pkgName
+        @ruleUnderscored = _s.underscored props.pkgName
+        @ruleMessage = _s.humanize props.ruleMessage
+        @ruleDescription = props.ruleDescription
+        @appname = "coffeelint-#{@pkgName}"
         done()
 
   writing:
     app: ->
       @template '_package.json', 'package.json'
       @template 'index.js', 'index.js'
-      @template 'base-rule._coffee', "src/#{@ruleName}.coffee"
+      @template 'base-rule._coffee', "src/#{@pkgName}.coffee"
 
     projectfiles: ->
       @copy 'editorconfig', '.editorconfig'

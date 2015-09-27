@@ -6,7 +6,9 @@ describe 'generated index.js', ->
   beforeEach (done) ->
     helpers.run(path.join(__dirname, '../app'))
       .withOptions(skipInstall: true)
-      .withPrompts(ruleName: 'no_bad_code')
+      .withPrompts(pkgName: 'no_bad_code')
+      .withPrompts(ruleMessage: 'No bad code!')
+      .withPrompts(ruleDescription: 'Description of my rule.')
       .on 'end', done
 
   it 'exists', ->
@@ -17,4 +19,4 @@ describe 'generated index.js', ->
 
   it 'exports the coffeelint rule', ->
     assert.fileContent 'index.js',
-      '''module.exports = require('./src/no_bad_code');'''
+      '''module.exports = require('./src/no-bad-code');'''
