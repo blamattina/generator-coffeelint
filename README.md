@@ -4,7 +4,7 @@
 
 > [Yeoman](http://yeoman.io) generator
 [npm-shield]: https://img.shields.io/npm/v/generator-coffeelint.svg?style=flat-square
-[npm-package]: https://www.npmjs.com/package/coffeelint-no-focused-jasmine-specs
+[npm-package]: https://www.npmjs.com/package/generator.coffeelint
 [build-shield]: https://img.shields.io/circleci/project/blamattina/generator-coffeelint.svg?style=flat-square
 [build-status]: https://circleci.com/gh/blamattina/generator-coffeelint
 
@@ -29,6 +29,12 @@ Finally, initiate the generator:
 ```bash
 yo coffeelint
 ```
+
+### Contributing
+
+Contributing guidelines can be found [here][contributing-md].
+
+[contributing-md]: contributing.md
 
 ## License
 
