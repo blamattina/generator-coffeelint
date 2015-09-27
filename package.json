@@ -1,0 +1,28 @@
+{
+  "name": "generator-coffeelint",
+  "version": "0.0.0",
+  "description": "Yeoman generator",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": "blamattina/generator-coffeelint",
+  "author": {
+    "name": "Brian LaMattina",
+    "email": "",
+    "url": "https://github.com/blamattina"
+  },
+  "scripts": {
+    "test": "node jasmine.js"
+  },
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "coffee-script": "^1.10.0",
+    "yeoman-generator": "^0.19.0",
+    "yosay": "^1.0.2"
+  },
+  "devDependencies": {
+    "jasmine": "^2.3.2"
+  }
+}
