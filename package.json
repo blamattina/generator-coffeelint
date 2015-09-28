@@ -1,7 +1,7 @@
 {
   "name": "generator-coffeelint",
   "version": "0.1.0",
-  "description": "Yeoman generator",
+  "description": "Yeoman generator of coffeelint rules",
   "license": "MIT",
   "main": "index.js",
   "repository": "blamattina/generator-coffeelint",
@@ -15,7 +15,9 @@
     "test": "npm run lint && npm run jasmine"
   },
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "coffeelintrule",
+    "coffeelint"
   ],
   "dependencies": {
     "chalk": "^1.0.0",

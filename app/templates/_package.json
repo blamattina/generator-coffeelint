@@ -1,6 +1,7 @@
 {
   "name": "<%= appname %>",
   "version": "0.0.0",
+  "description": "<%= ruleDescription %>",
   "scripts": {
     "lint": "coffeelint src/ spec/",
     "jasmine": "node jasmine-runner.js",

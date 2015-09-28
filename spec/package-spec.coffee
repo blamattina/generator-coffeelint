@@ -35,5 +35,8 @@ describe 'generated package.json', ->
     expect(devDependencies).toContain 'jasmine'
     expect(devDependencies).toContain 'jasmine-spec-reporter'
 
-  it 'has a test script' , ->
+  it 'has a test script', ->
     expect(@pkg.scripts.test).toEqual 'npm run lint && npm run jasmine'
+
+  it 'has a description', ->
+    expect(@pkg.description).toEqual 'Description of my rule.'
