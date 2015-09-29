@@ -1,12 +1,7 @@
 # generator-coffeelint
-[![Build Status][build-shield]][build-status] [![npm][npm-shield]][npm-package]
+[![Build Status](https://img.shields.io/circleci/project/blamattina/generator-coffeelint.svg?style=flat-square)](https://circleci.com/gh/blamattina/generator-coffeelint) [![npm](https://img.shields.io/npm/v/generator-coffeelint.svg?style=flat-square)](https://www.npmjs.com/package/generator-coffeelint)
 
-
-> [Yeoman](http://yeoman.io) generator
-[npm-shield]: https://img.shields.io/npm/v/generator-coffeelint.svg?style=flat-square
-[npm-package]: https://www.npmjs.com/package/generator.coffeelint
-[build-shield]: https://img.shields.io/circleci/project/blamattina/generator-coffeelint.svg?style=flat-square
-[build-status]: https://circleci.com/gh/blamattina/generator-coffeelint
+> [Yeoman](http://yeoman.io) generator to generate coffeelint rules. If it is part of your style guide, you should lint for it.  This will make that easier to do.
 
 ## Getting Started
 
