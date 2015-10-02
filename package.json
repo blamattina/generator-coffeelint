@@ -1,6 +1,6 @@
 {
   "name": "generator-coffeelint",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Yeoman generator of coffeelint rules",
   "license": "MIT",
   "main": "index.js",
