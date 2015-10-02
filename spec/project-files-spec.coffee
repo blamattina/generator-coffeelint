@@ -14,6 +14,7 @@ describe 'project files', ->
   it 'exist', ->
     assert.file [
       '.editorconfig'
+      '.gitignore'
       'coffeelint.json'
       'jasmine-runner.js'
       'spec/support/jasmine.json'

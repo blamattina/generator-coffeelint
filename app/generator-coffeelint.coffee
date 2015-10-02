@@ -74,6 +74,7 @@ module.exports = yeoman.generators.Base.extend
 
     projectfiles: ->
       @copy 'editorconfig', '.editorconfig'
+      @copy 'gitignore', '.gitignore'
       @copy 'coffeelint.json', 'coffeelint.json'
       @copy 'jasmine-runner.js', 'jasmine-runner.js'
       @copy 'jasmine.json', 'spec/support/jasmine.json'
