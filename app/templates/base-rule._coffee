@@ -6,6 +6,6 @@ class <%= ruleClass %>
     description: '<%= ruleDescription %>'
 
   lintLine: ->
-    false
+    true
 
 module.exports = <%= ruleClass %>

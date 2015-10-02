@@ -5,7 +5,7 @@ coffeelint.registerRule <%= ruleClass %>
 
 describe '<%= ruleClass %>', ->
 
-  it 'smoke test', ->
+  describe 'smoke test', ->
     beforeEach ->
       lintyCode = '''
         # Anything will fail
@@ -20,5 +20,5 @@ describe '<%= ruleClass %>', ->
       expect(@errors.length).toBe 1
       error = @errors[0]
       expect(error.level).toBe 'warn'
-      expect(error.lineNumber).toBe 2
-      expect(error.rule).toBe 'no_focused_jasmine_specs'
+      expect(error.lineNumber).toBe 1
+      expect(error.rule).toBe '<%= ruleUnderscored %>'
