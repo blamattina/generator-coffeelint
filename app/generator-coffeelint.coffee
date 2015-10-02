@@ -67,6 +67,7 @@ module.exports = yeoman.generators.Base.extend
 
   writing:
     app: ->
+      @template '_README.md', 'README.md'
       @template '_package.json', 'package.json'
       @template 'index.js', 'index.js'
       @template 'base-rule._coffee', "src/#{@pkgName}.coffee"
