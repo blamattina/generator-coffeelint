@@ -20,7 +20,7 @@ module.exports = yeoman.generators.Base.extend
         {
           type: 'input'
           name: 'pkgName'
-          message: 'What is the name of your coffelint rule?'
+          message: 'What is the name of your coffeelint rule?'
           default: extractedName
         },
         {
