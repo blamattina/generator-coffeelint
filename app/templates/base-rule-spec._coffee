@@ -1,4 +1,4 @@
-<%= ruleClass %> = require '../src/<%= pkgName %>'
+<%= ruleClass %> = require '../'
 
 coffeelint = require 'coffeelint'
 coffeelint.registerRule <%= ruleClass %>
