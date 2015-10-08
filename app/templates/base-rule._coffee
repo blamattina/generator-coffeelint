@@ -1,7 +1,7 @@
 class <%= ruleClass %>
   rule:
     name: '<%= ruleUnderscored %>'
-    level: 'error'
+    level: 'warn'
     message: '<%= ruleMessage %>'
     description: '<%= ruleDescription %>'
 

@@ -11,12 +11,11 @@ describe '<%= ruleClass %>', ->
         # Anything will fail
       '''
       config =
-        <%= ruleUnderscored %>:
-          level: 'warn'
+        <%= ruleUnderscored %>: {}
 
       @errors = coffeelint.lint(lintyCode, config)
 
-    it 'has an error on line 1', ->
+    it 'has an warning on line 1', ->
       expect(@errors.length).toBe 1
       error = @errors[0]
       expect(error.level).toBe 'warn'
