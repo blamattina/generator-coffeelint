@@ -29,7 +29,7 @@ yo coffeelint
 
 Contributing guidelines can be found [here][contributing-md].
 
-[contributing-md]: contributing.md
+[contributing-md]: CONTRIBUTING.md
 
 ## License
 
